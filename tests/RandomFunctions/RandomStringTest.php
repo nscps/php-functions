@@ -27,18 +27,6 @@ class RandomStringTest extends CustomTestCase
         ];
     }
 
-    public function validCandidatesDataProvider(): array
-    {
-        return [
-            [CL_RANDOM_SYMBOLS],
-            [CL_RANDOM_NUMBERS],
-            [CL_RANDOM_LOWERCASE_LETTERS],
-            [CL_RANDOM_UPPERCASE_LETTERS],
-            [CL_RANDOM_ALPHANUMERIC],
-            ['abc123'],
-        ];
-    }
-
     /**
      * @test
      * @dataProvider invalidLengthDataProvider
@@ -70,22 +58,6 @@ class RandomStringTest extends CustomTestCase
         $string_length = strlen($string);
 
         $this->assertSame($length, $string_length);
-
-        for ($i = 0; $i < $string_length; $i++) {
-            $this->assertStringContainsString($string[$i], CL_RANDOM_ALPHANUMERIC);
-        }
-    }
-
-    /**
-     * @test
-     * @dataProvider validCandidatesDataProvider
-     */
-    public function shouldReturnCharWhenCalledWithArgs(string $candidates): void
-    {
-        $string = random_string(8);
-        $string_length = strlen($string);
-
-        $this->assertSame(8, $string_length);
 
         for ($i = 0; $i < $string_length; $i++) {
             $this->assertStringContainsString($string[$i], CL_RANDOM_ALPHANUMERIC);
