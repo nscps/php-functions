@@ -30,10 +30,11 @@ if (!function_exists('remove_extra_parenthesis')) {
         }
 
         // Find sequence of "close parenthesis"
-        $j = $last = strpos(substr($expression, $i + 1), ')') + $i + 1;
-        if ($j === false) {
+        if (!str_contains(substr($expression, $i + 1), ')')) {
             return $expression;
         }
+
+        $j = $last = strpos(substr($expression, $i + 1), ')') + $i + 1;
         while ($last + 1 < $length && $expression[$last + 1] === ')') {
             $last++;
         }
