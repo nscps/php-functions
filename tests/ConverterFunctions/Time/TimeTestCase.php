@@ -3,7 +3,6 @@
 namespace Nscps\Functions\Tests\ConverterFunctions\Time;
 
 use Nscps\Functions\Tests\CustomTestCase;
-use DateTime;
 
 abstract class TimeTestCase extends CustomTestCase
 {

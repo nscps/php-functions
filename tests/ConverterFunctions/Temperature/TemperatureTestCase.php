@@ -3,7 +3,6 @@
 namespace Nscps\Functions\Tests\ConverterFunctions\Temperature;
 
 use Nscps\Functions\Tests\CustomTestCase;
-use DateTime;
 
 abstract class TemperatureTestCase extends CustomTestCase
 {
