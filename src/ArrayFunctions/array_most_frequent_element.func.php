@@ -12,9 +12,9 @@ if (!function_exists('array_most_frequent_element')) {
      * it will return an array with those elements.
      *
      * @param array $arr Array of strings, integers or both.
-     * @return array|int|string|void|null
+     * @return mixed
      */
-    function array_most_frequent_element(array $arr)
+    function array_most_frequent_element(array $arr): mixed
     {
         Assert::notEmpty($arr);
 

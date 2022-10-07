@@ -11,7 +11,7 @@ if (!function_exists('array_key_replace')) {
      * @param mixed $replace
      * @return array
      */
-    function array_key_replace(array $arr, mixed $search, mixed $replace)
+    function array_key_replace(array $arr, mixed $search, mixed $replace): array
     {
         foreach ($arr as $key => $value) {
             if ($key === $search) {

@@ -9,7 +9,7 @@ if (!function_exists('array_value_recursive')) {
      * @param array $arr
      * @return array
      */
-    function array_value_recursive(array $arr)
+    function array_value_recursive(array $arr): array
     {
         $return = [];
 
