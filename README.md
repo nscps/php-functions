@@ -10,6 +10,7 @@ Functions that do not deserve a class or component. Not yet. :)
   * array_key_replace
   * array_most_frequent_element
   * array_subsets
+  * array_value_recursive
   * array_value_replace
   * natural_implode
 * Color
